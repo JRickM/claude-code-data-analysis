@@ -1,0 +1,7 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+# Never commit profiles: they hold statistics of the real data
+_profiles/

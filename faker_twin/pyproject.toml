@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "faker-twin"
+version = "0.1.0"
+description = "Examine the data files in a folder and create fake twins with the same structure using Faker."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["faker>=20", "pandas>=2.0", "numpy>=1.24"]
+
+[project.optional-dependencies]
+excel = ["openpyxl>=3.1"]
+parquet = ["pyarrow>=14"]
+dev = ["pytest>=7"]
+
+[project.scripts]
+faker-twin = "faker_twin.cli:main"
+
+[tool.setuptools]
+packages = ["faker_twin"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
